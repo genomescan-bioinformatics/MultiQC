@@ -391,6 +391,6 @@ def parse_coverage_metrics(f):
             data[metric + " pct"] = percentage
 
     m = re.search(r"(.*)\.(\S*)_coverage_metrics_?(\S*)?.csv", f["fn"])
-    sample, phenotype = m.group(1), m.group(2)
+    sample, phenotype = m.group(1), m.group(3)
     f["s_name"] = sample
     return {phenotype: data}
